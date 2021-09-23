@@ -2,9 +2,8 @@ import React from 'react'
 
 const FormTodo = () => {
     return (
-        <div>
-            
-        </div>
+        <form>
+        </form>
     )
 }
 

@@ -12,5 +12,6 @@ export const ContainerDarkMode = styled.div`
     }
 `
 export const Title = styled.h1`
-    
+    color:#fff;
+    letter-spacing: 10px;
 `
