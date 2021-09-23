@@ -1,10 +1,14 @@
 import React from 'react'
-
-const ItemTodoList = () => {
+import {Item} from '../styles/styleItem'
+const ItemTodoList = ({item,i}) => {
     return (
-        <div>
-            
-        </div>
+        <Item>
+            {item}
+            <button className="delete">
+                <span className="span 1"/>
+                <span className="span 2"/>
+            </button>
+        </Item>
     )
 }
 
