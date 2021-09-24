@@ -9,11 +9,11 @@ function App() {
   const ref = useRef(null)
   return (
     <Body darkMode={darkMode}>
+      <GlobalStyle darkMode={darkMode}/>
       <ContainerTodo>
-        <GlobalStyle/>
         <DarkLightMode darkMode={darkMode} setDarkMode={setDarkMode}/>
         <FormTodo reference={ref} todo={todo} setTodo={setTodo}/>
-        <TodoList todo={todo}/>
+        <TodoList todo={todo} setTodo={setTodo}/>
       </ContainerTodo>
     </Body>
   )

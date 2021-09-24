@@ -4,14 +4,16 @@ const FormTodo = ({reference,todo,setTodo}) => {
     const handleSubmitForm = e => {
         e.preventDefault();
         let text = reference.current.value
-        let newTodo = [...todo,text.trim()]
-        setTodo(newTodo)
-        window.localStorage.setItem('todo', JSON.stringify(newTodo))
-        reference.current.value = ''
+        if(text){
+            let newTodo = [...todo,text.trim()]
+            setTodo(newTodo)
+            window.localStorage.setItem('todo', JSON.stringify(newTodo))
+            reference.current.value = ''
+        }
     }
     return (
         <Form onSubmit={handleSubmitForm}>
-            <Input type="text" placeholder="" ref={reference}/>
+            <Input type="text" placeholder="Create a new todo..." ref={reference}/>
             {/* <Chekbox type='submit'/> */}
         </Form>
     )
