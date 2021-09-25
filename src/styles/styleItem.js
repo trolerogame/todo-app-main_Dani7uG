@@ -1,12 +1,12 @@
-import styled from 'styled-components';
+import styled,{css} from 'styled-components';
 
 
 export const Item = styled.div`
     width:100%;
     height:50px;
-    background:hsl(235, 24%, 19%);
-    color:hsl(234, 39%, 85%);
-    border-bottom:.5px solid #999;
+    background:${props => props.darkMode ? 'hsl(235, 24%, 19%)' : 'hsl(236, 33%, 92%)'};
+    color:${props => props.check ? `#555` : `hsl(234, 39%, 85%)`};
+    border-bottom:.5px solid #555;
     font-size: 18px;
     display:flex;
     align-items: center;
@@ -28,14 +28,14 @@ export const Item = styled.div`
     .two{
         transform: rotate(-45deg);
     }
+    .item-text{
+        text-decoration: ${props => props.check ? 'line-through' : 'none'};
+    }
     .delete{
         padding:10px;
         margin:10px;
         opacity: 0;
         cursor: pointer;
-    }
-    .item-text{
-        padding:0 20px;
     }
     &:first-child{
         border-top-left-radius: 5px;
@@ -44,4 +44,9 @@ export const Item = styled.div`
     &:hover > .delete{
         opacity: 1;
     } 
+`
+
+export const ContaintText = styled.div`
+    display:flex;
+    align-items: center;
 `

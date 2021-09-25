@@ -1,16 +1,34 @@
 import React from 'react'
 import ItemTodoList from './ItemTodoList'
-const TodoList = ({todo,setTodo}) => {
-    const deleteItem = item => {
-        const newItem = todo.filter((it,i) => i !== item)
-        setTodo(newItem)
-        localStorage.setItem('todo',JSON.stringify(newItem))
-    }
-    return (
-        <div>
-            {todo.map((item,i) => <ItemTodoList key={i} item={item} i={i} deleteItem={deleteItem}/>)}
-        </div>
-    )
+import { saveLocalStorage } from '../functions/saveLocalStorage'
+const TodoList = ({ todo, setTodo, darkMode }) => {
+  const deleteItem = item => {
+    const newItem = todo.filter((it, i) => i !== item)
+    setTodo(newItem)
+    saveLocalStorage(newItem)
+  }
+  const checkItem = (check,i) => {
+    const newItem = 
+      todo.map((item,index) => 
+        index === i ? {...item,check} : item
+      )
+    setTodo(newItem)
+    saveLocalStorage(newItem)
+  }
+  return (
+    <div>
+      {todo.map((item, i) => (
+        <ItemTodoList
+          key={i}
+          darkMode={darkMode}
+          item={item}
+          i={i}
+          deleteItem={deleteItem}
+          checkItem={checkItem}
+        />
+      ))}
+    </div>
+  )
 }
 
 export default TodoList

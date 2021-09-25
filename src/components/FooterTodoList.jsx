@@ -1,10 +1,11 @@
 import React from 'react'
-
-const FooterTodoList = () => {
+import { FooterItem,TaskLeft,ClearComplete } from '../styles/styleFooter'
+const FooterTodoList = ({darkMode,todos}) => {
     return (
-        <div>
-            
-        </div>
+        <FooterItem darkMode={darkMode}>
+            <TaskLeft>{todos} items left</TaskLeft>
+            <ClearComplete>Clear Completed</ClearComplete>
+        </FooterItem>
     )
 }
 
