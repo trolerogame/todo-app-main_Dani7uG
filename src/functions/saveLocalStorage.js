@@ -1,0 +1,1 @@
+export const saveLocalStorage = item => localStorage.setItem("todo", JSON.stringify(item)) 
