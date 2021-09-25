@@ -15,7 +15,7 @@ export const Body = styled.main`
         background-image:url(${props => props.darkMode ? bgMovileDarkMode : bgMovileLightMode});
         background-size: 100% 35%;
     }
-    padding:0 35px 0 35px;
+    padding:0 35px 20px 35px;
 `
 export const ContainerTodo = styled.div`
     width:100%;
