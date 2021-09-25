@@ -10,6 +10,7 @@ export const FooterItem = styled.div`
     display: flex;
     align-items: center;
     justify-content:space-between;
+    position:relativo;
 `
 
 export const TaskLeft = styled.p`
@@ -23,4 +24,21 @@ export const ClearComplete = styled.button`
     cursor: pointer;
     color:hsl(234, 11%, 52%);
     padding:15px 15px;
+`
+
+export const BarFilter = styled.div`
+    color:hsl(234,11%,52%);
+    .filter{
+        padding:0 10px;
+    }
+    @media (max-width:700px){
+        position:absoluto;
+        bottom:-40px;
+        left:0;
+        right:0;
+        width:100%;
+        display:flex;
+        justify-content:space-around;
+        height:50px; 
+    }
 `
