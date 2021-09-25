@@ -8,12 +8,9 @@ const TodoList = ({ todo, setTodo, darkMode }) => {
     saveLocalStorage(newItem)
   }
   const checkItem = (check,i) => {
-    const newItem = 
-      todo.map((item,index) => 
-        index === i ? {...item,check} : item
-      )
-    setTodo(newItem)
-    saveLocalStorage(newItem)
+    todo[i] = {...todo[i], check}
+    setTodo(todo)
+    saveLocalStorage(todo)
   }
   return (
     <div>
