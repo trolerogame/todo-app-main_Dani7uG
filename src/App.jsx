@@ -16,7 +16,7 @@ function App() {
         <DarkLightMode darkMode={darkMode} setDarkMode={setDarkMode}/>
         <FormTodo darkMode={darkMode} reference={ref} todo={todo} setTodo={setTodo}/>
         <TodoList darkMode={darkMode} todo={todo} setTodo={setTodo}/>
-        {todo.length !== 0 && <FooterTodoList darkMode={darkMode} todos={todo} setTodo={setTodo}/>}
+        <FooterTodoList darkMode={darkMode} todos={todo} setTodo={setTodo}/>
       </ContainerTodo>
     </Body>
   )
