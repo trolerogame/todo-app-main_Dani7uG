@@ -10,7 +10,7 @@ export const FooterItem = styled.div`
     display: flex;
     align-items: center;
     justify-content:space-between;
-    position:relativo;
+    position:relative;
 `
 
 export const TaskLeft = styled.p`
@@ -27,18 +27,31 @@ export const ClearComplete = styled.button`
 `
 
 export const BarFilter = styled.div`
-    color:hsl(234,11%,52%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
     .filter{
-        padding:0 10px;
+        cursor:pointer;
+        background:none;
+        border:none;
+        outline:none;
+        padding:0 20px;
+        color:hsl(234,11%,52%);
+        font-size: 18px;
+        font-weight: 700;
     }
     @media (max-width:700px){
-        position:absoluto;
-        bottom:-40px;
+        background:${props => props.darkMode ? 'hsl(235, 24%, 19%)' : 'hsl(236, 33%, 92%)'};
+        border-radius:5px;
+        position:absolute;
+        bottom:-70px;
         left:0;
         right:0;
-        width:100%;
-        display:flex;
-        justify-content:space-around;
         height:50px; 
+        
+        .filter{
+            padding:10px;
+            margin:0;
+        }
     }
 `

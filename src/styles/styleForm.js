@@ -18,7 +18,8 @@ export const Input = styled.input`
     width: 100%;
     height:50px;
     background:none;
-    color:hsl(234, 39%, 85%);
+    color:${props => props.darkMode ? 'hsl(234, 39%, 85%)' : '#555'};
+    font-weight: 700;
     font-size:18px;
 `
 

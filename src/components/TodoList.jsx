@@ -22,6 +22,7 @@ const TodoList = ({ todo, setTodo, darkMode }) => {
           i={i}
           deleteItem={deleteItem}
           checkItem={checkItem}
+          nextItem={todo[i+1] || false}
         />
       ))}
     </div>

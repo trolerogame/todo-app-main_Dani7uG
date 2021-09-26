@@ -5,7 +5,13 @@ export const Item = styled.div`
     width:100%;
     height:50px;
     background:${props => props.darkMode ? 'hsl(235, 24%, 19%)' : 'hsl(236, 33%, 92%)'};
-    color:${props => props.check ? `#555` : `hsl(234, 39%, 85%)`};
+    color:${props => 
+        props.check 
+            ? 
+            (props.darkMode ? `#555` : '#bbb') 
+            : 
+            (props.darkMode ? `hsl(234, 39%, 85%)` : "#555")
+    };
     border-bottom:.5px solid #555;
     font-size: 18px;
     display:flex;
