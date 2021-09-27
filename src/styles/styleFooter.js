@@ -5,7 +5,7 @@ export const FooterItem = styled.div`
     height:50px;
     border-bottom-right-radius:5px;
     border-bottom-left-radius:5px;
-    background:${props => props.darkMode ? 'hsl(235, 24%, 19%)' : 'hsl(236, 33%, 92%)'};
+    background:${props => props.darkMode ? 'hsl(235, 24%, 19%)' : 'hsl(0, 0%, 98%)'};
     padding:10px 0;
     display: flex;
     align-items: center;
@@ -30,6 +30,9 @@ export const BarFilter = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
+    box-shadow: 1px 1px 14px -1px rgba(60,60,60,0.75);
+    -webkit-box-shadow: 1px 1px 14px -1px rgba(60,60,60,0.75);
+    -moz-box-shadow: 1px 1px 14px -1px rgba(60,60,60,0.75);
     .filter{
         cursor:pointer;
         background:none;
@@ -41,7 +44,7 @@ export const BarFilter = styled.div`
         font-weight: 700;
     }
     @media (max-width:700px){
-        background:${props => props.darkMode ? 'hsl(235, 24%, 19%)' : 'hsl(236, 33%, 92%)'};
+        background:${props => props.darkMode ? 'hsl(235, 24%, 19%)' : 'hsl(0, 0, 92%)'};
         border-radius:5px;
         position:absolute;
         bottom:-70px;

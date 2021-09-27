@@ -1,10 +1,10 @@
-import styled,{css} from 'styled-components';
+import styled from 'styled-components';
 
 
 export const Item = styled.div`
     width:100%;
     height:50px;
-    background:${props => props.darkMode ? 'hsl(235, 24%, 19%)' : 'hsl(236, 33%, 92%)'};
+    background:${props => props.darkMode ? 'hsl(235, 24%, 19%)' : 'hsl(0, 0%, 98%)'};
     color:${props => 
         props.check 
             ? 
@@ -12,7 +12,7 @@ export const Item = styled.div`
             : 
             (props.darkMode ? `hsl(234, 39%, 85%)` : "#555")
     };
-    border-bottom:.5px solid #555;
+    border-bottom:.5px solid ${props => props.darkMode ? '#555' : '#b9b9b9'};
     font-size: 18px;
     display:flex;
     align-items: center;
@@ -21,8 +21,8 @@ export const Item = styled.div`
     position:relative;
     .span{
         width:20px;
-        height: 2px;
-        background-color:hsl(234, 39%, 85%);
+        height: 1px;
+        background-color:${props => props.darkMode ? 'hsl(0, 0%, 98%)' : 'hsl(235, 24%, 19%)'};
         position: absolute;
         right: 0;
         margin:0 10px;

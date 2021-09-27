@@ -22,6 +22,11 @@ export const ContainerTodo = styled.div`
     max-width:750px;
     margin-top:80px;
 `
+export const ContainerList = styled.div`
+    box-shadow: 1px 2px 24px -1px rgba(60,60,60,0.75);
+    -webkit-box-shadow: 1px 2px 24px -1px rgba(60,60,60,0.75);
+    -moz-box-shadow: 1px 2px 24px -1px rgba(60,60,60,0.75);
+`
 
 export const GlobalStyle = createGlobalStyle`
     body {

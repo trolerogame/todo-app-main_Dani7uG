@@ -1,5 +1,5 @@
 import React,{useState,useRef} from 'react'
-import {Body,GlobalStyle,ContainerTodo} from './styles/styleAll'
+import {Body,GlobalStyle,ContainerTodo,ContainerList} from './styles/styleAll'
 import DarkLightMode from './components/DarkLightMode'
 import FormTodo from './components/FormTodo'
 import TodoList from './components/TodoList'
@@ -15,8 +15,10 @@ function App() {
       <ContainerTodo>
         <DarkLightMode darkMode={darkMode} setDarkMode={setDarkMode}/>
         <FormTodo darkMode={darkMode} reference={ref} todo={todo} setTodo={setTodo}/>
-        <TodoList darkMode={darkMode} todo={todo} setTodo={setTodo}/>
-        <FooterTodoList darkMode={darkMode} todos={todo} setTodo={setTodo}/>
+        <ContainerList>
+          <TodoList darkMode={darkMode} todo={todo} setTodo={setTodo}/>
+          <FooterTodoList darkMode={darkMode} todos={todo} setTodo={setTodo}/>
+        </ContainerList>
       </ContainerTodo>
     </Body>
   )

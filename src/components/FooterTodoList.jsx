@@ -4,13 +4,13 @@ import { FooterItem,TaskLeft,ClearComplete,BarFilter } from '../styles/styleFoot
 import {getLocalStorage as getTodo} from '../functions/getLocalStorage'
 const FooterTodoList = ({darkMode,todos,setTodo}) => {
     const handleClearComplete = () => {
-        const newTodo = todos.filter(item => item.check !== true)
-        setTodo(newTodo)
+        const newTodo = getTodo().filter(item => item.check !== true)
+        setTodo(todos.filter(item => item.check !== true))
         saveLocalStorage(newTodo)
     }
     const filteredTodo = bool => 
         setTodo(getTodo().filter(item => item.check === bool))
-    const all = () => setTodo(getLocalStorage())
+    const all = () => setTodo(getTodo())
     const complete = () => filteredTodo(true)
     const activate = () => filteredTodo(false)
     return (

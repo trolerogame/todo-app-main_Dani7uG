@@ -10,6 +10,8 @@ export const ContainerDarkMode = styled.div`
     height:50px;
     .darkMode{
         color:#fff;
+        cursor:pointer;
+        padding:5px;
     }
 `
 export const Title = styled.h1`

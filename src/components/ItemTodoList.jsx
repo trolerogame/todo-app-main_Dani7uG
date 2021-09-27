@@ -2,15 +2,13 @@ import React,{useState} from 'react'
 import {Item,ContaintText} from '../styles/styleItem'
 import { Chekbox } from '../styles/styleForm'
 import { BsCheck } from "react-icons/bs";
-const ItemTodoList = ({item,i,deleteItem,darkMode,checkItem,nextItem}) => {
+const ItemTodoList = ({item,i,deleteItem,darkMode,checkItem}) => {
     const [check,setCheck] = useState(item.check)
-    const handleDelete = () => {
-        // setCheck(nextItem.check)
+    const handleDelete = () => 
         deleteItem(i)
-    }
     const handleChecked = () => {
         setCheck(!check)
-        checkItem(!check,i)
+        checkItem(!check,i,item)
     }
     return (
         <Item check={check} darkMode={darkMode}>

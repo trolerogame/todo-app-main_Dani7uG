@@ -7,9 +7,8 @@ const TodoList = ({ todo, setTodo, darkMode }) => {
     setTodo(newItem)
     saveLocalStorage(newItem)
   }
-  const checkItem = (check,i) => {
+  const checkItem = (check,i,itemT) => {
     todo[i] = {...todo[i], check}
-    setTodo(todo)
     saveLocalStorage(todo)
   }
   return (
