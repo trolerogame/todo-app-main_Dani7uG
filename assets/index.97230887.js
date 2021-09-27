@@ -148,9 +148,6 @@ var e=Object.defineProperty,t=Object.defineProperties,o=Object.getOwnPropertyDes
     display:flex;
     justify-content:center;
     align-items:center;
-    box-shadow: 1px 1px 14px -1px rgba(60,60,60,0.75);
-    -webkit-box-shadow: 1px 1px 14px -1px rgba(60,60,60,0.75);
-    -moz-box-shadow: 1px 1px 14px -1px rgba(60,60,60,0.75);
     .filter{
         cursor:pointer;
         background:none;
@@ -169,7 +166,9 @@ var e=Object.defineProperty,t=Object.defineProperties,o=Object.getOwnPropertyDes
         left:0;
         right:0;
         height:50px; 
-        
+        box-shadow: 1px 1px 14px -1px rgba(60,60,60,0.75);
+        -webkit-box-shadow: 1px 1px 14px -1px rgba(60,60,60,0.75);
+        -moz-box-shadow: 1px 1px 14px -1px rgba(60,60,60,0.75);
         .filter{
             padding:10px;
             margin:0;
