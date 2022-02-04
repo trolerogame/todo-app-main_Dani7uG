@@ -1,8 +1,8 @@
 import styled,{createGlobalStyle} from 'styled-components';
-import bgDesktopDarkMode from '../bg-desktop-dark.jpg'
-import bgMovileDarkMode from '../bg-mobile-dark.jpg'
-import bgDesktopLightMode from '../bg-desktop-light.jpg'
-import bgMovileLightMode from '../bg-mobile-light.jpg'
+import bgDesktopDarkMode from '../../public/bg-desktop-dark.jpg'
+import bgMovileDarkMode from '../../public/bg-mobile-dark.jpg'
+import bgDesktopLightMode from '../../public/bg-desktop-light.jpg'
+import bgMovileLightMode from '../../public/bg-mobile-light.jpg'
 export const Body = styled.main`
     background:
         url(${props => props.darkMode ? bgDesktopDarkMode : bgDesktopLightMode}) no-repeat;
