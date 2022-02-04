@@ -1,8 +1,8 @@
 import styled,{createGlobalStyle} from 'styled-components';
-import bgDesktopDarkMode from '/todo-app-main_Dani7uG/bg-desktop-dark.jpg'
-import bgMovileDarkMode from '/todo-app-main_Dani7uG/bg-mobile-dark.jpg'
-import bgDesktopLightMode from '/todo-app-main_Dani7uG/bg-desktop-light.jpg'
-import bgMovileLightMode from '/todo-app-main_Dani7uG/bg-mobile-light.jpg'
+import bgDesktopDarkMode from '../todo-app-main_Dani7uG/bg-desktop-dark.jpg'
+import bgMovileDarkMode from '../todo-app-main_Dani7uG/bg-mobile-dark.jpg'
+import bgDesktopLightMode from '../todo-app-main_Dani7uG/bg-desktop-light.jpg'
+import bgMovileLightMode from '../todo-app-main_Dani7uG/bg-mobile-light.jpg'
 export const Body = styled.main`
     background:
         url(${props => props.darkMode ? bgDesktopDarkMode : bgDesktopLightMode}) no-repeat;
