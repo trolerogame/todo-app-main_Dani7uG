@@ -5,7 +5,6 @@ import { BsCheck } from "react-icons/bs";
 const ItemTodoList = ({item,i,deleteItem,darkMode,checkItem}) => {
     const handleDelete = () => 
         deleteItem(i)
-
     const handleChecked = () => 
         checkItem(!item.check,i)
     
