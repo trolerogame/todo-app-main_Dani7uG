@@ -7,8 +7,9 @@ const TodoList = ({ todo, setTodo, darkMode }) => {
     setTodo([...newItem])
     saveLocalStorage(newItem)
   }
-  const checkItem = (check,i,itemT) => {
+  const checkItem = (check,i) => {
     todo[i] = {...todo[i], check}
+    setTodo([...todo])
     saveLocalStorage(todo)
   }
   return (
@@ -21,7 +22,6 @@ const TodoList = ({ todo, setTodo, darkMode }) => {
           i={i}
           deleteItem={deleteItem}
           checkItem={checkItem}
-          nextItem={todo[i+1] || false}
         />
       ))}
     </div>
