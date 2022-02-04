@@ -11,7 +11,7 @@ const ItemTodoList = ({item,i,deleteItem,darkMode,checkItem}) => {
         checkItem(!check,i,item)
     }
     return (
-        <Item check={check} darkMode={darkMode}>
+        <Item check={check == ítem.check} darkMode={darkMode}>
             <ContaintText>
                 <Chekbox check={check} onClick={handleChecked}>
                     <BsCheck size='20px' className='check'/>
