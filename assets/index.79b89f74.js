@@ -1,4 +1,4 @@
-var e=Object.defineProperty,t=Object.defineProperties,o=Object.getOwnPropertyDescriptors,r=Object.getOwnPropertySymbols,n=Object.prototype.hasOwnProperty,a=Object.prototype.propertyIsEnumerable,i=(t,o,r)=>o in t?e(t,o,{enumerable:!0,configurable:!0,writable:!0,value:r}):t[o]=r;import{s as d,W as l,R as s,B as c,a as p,r as m,b as u,c as g}from"./vendor.d56fc526.js";!function(){const e=document.createElement("link").relList;if(!(e&&e.supports&&e.supports("modulepreload"))){for(const e of document.querySelectorAll('link[rel="modulepreload"]'))t(e);new MutationObserver((e=>{for(const o of e)if("childList"===o.type)for(const e of o.addedNodes)"LINK"===e.tagName&&"modulepreload"===e.rel&&t(e)})).observe(document,{childList:!0,subtree:!0})}function t(e){if(e.ep)return;e.ep=!0;const t=function(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerpolicy&&(t.referrerPolicy=e.referrerpolicy),"use-credentials"===e.crossorigin?t.credentials="include":"anonymous"===e.crossorigin?t.credentials="omit":t.credentials="same-origin",t}(e);fetch(e.href,t)}}();const x=d.main`
+var e=Object.defineProperty,t=Object.defineProperties,o=Object.getOwnPropertyDescriptors,r=Object.getOwnPropertySymbols,a=Object.prototype.hasOwnProperty,n=Object.prototype.propertyIsEnumerable,i=(t,o,r)=>o in t?e(t,o,{enumerable:!0,configurable:!0,writable:!0,value:r}):t[o]=r;import{s as d,W as l,R as c,B as s,a as p,r as m,b as u,c as g}from"./vendor.d56fc526.js";!function(){const e=document.createElement("link").relList;if(!(e&&e.supports&&e.supports("modulepreload"))){for(const e of document.querySelectorAll('link[rel="modulepreload"]'))t(e);new MutationObserver((e=>{for(const o of e)if("childList"===o.type)for(const e of o.addedNodes)"LINK"===e.tagName&&"modulepreload"===e.rel&&t(e)})).observe(document,{childList:!0,subtree:!0})}function t(e){if(e.ep)return;e.ep=!0;const t=function(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerpolicy&&(t.referrerPolicy=e.referrerpolicy),"use-credentials"===e.crossorigin?t.credentials="include":"anonymous"===e.crossorigin?t.credentials="omit":t.credentials="same-origin",t}(e);fetch(e.href,t)}}();const x=d.main`
     background:
         url(${e=>e.darkMode?"/todo-app-main_Dani7uG/assets/bg-desktop-dark.cf72eaad.jpg":"/todo-app-main_Dani7uG/assets/bg-desktop-light.c99caf89.jpg"}) no-repeat;
     background-size: 100% 40%;
@@ -42,7 +42,7 @@ var e=Object.defineProperty,t=Object.defineProperties,o=Object.getOwnPropertyDes
 `,y=d.h1`
     color:#fff;
     letter-spacing: 10px;
-`,E=s.memo((({darkMode:e,setDarkMode:t})=>{let o=e?c:p;return s.createElement(k,null,s.createElement(y,null,"TODO"),s.createElement(o,{size:"32px",onClick:()=>t(!e),className:"darkMode"}))})),M=d.form`
+`,E=c.memo((({darkMode:e,setDarkMode:t})=>{let o=e?s:p;return c.createElement(k,null,c.createElement(y,null,"TODO"),c.createElement(o,{size:"32px",onClick:()=>t(!e),className:"darkMode"}))})),M=d.form`
     width:100%;
     height:50px;
     border-radius:5px;
@@ -77,7 +77,7 @@ var e=Object.defineProperty,t=Object.defineProperties,o=Object.getOwnPropertyDes
         opacity:${e=>e.check?1:0};
         color:#fef;
     }
-`,j=({reference:e,todo:t,setTodo:o,darkMode:r})=>{const[n,a]=m.exports.useState(!1);return s.createElement(M,{darkMode:r,onSubmit:r=>{r.preventDefault();let n=e.current.value;if(!n)return;let a=[...t,{check:!1,value:n.trim()}];o(a),window.localStorage.setItem("todo",JSON.stringify(a)),e.current.value=""}},s.createElement(v,{check:n,onClick:()=>a(!n)},s.createElement(u,{size:"20px",className:"check"})),s.createElement(w,{type:"text",placeholder:"Create a new todo...",darkMode:r,ref:e}))},N=d.div`
+`,j=({reference:e,todo:t,setTodo:o,darkMode:r})=>{const[a,n]=m.exports.useState(!1);return c.createElement(M,{darkMode:r,onSubmit:r=>{r.preventDefault();let a=e.current.value;if(!a)return;let n=[...t,{check:!1,value:a.trim()}];o(n),window.localStorage.setItem("todo",JSON.stringify(n)),e.current.value=""}},c.createElement(v,{check:a,onClick:()=>n(!a)},c.createElement(u,{size:"20px",className:"check"})),c.createElement(w,{type:"text",placeholder:"Create a new todo...",darkMode:r,ref:e}))},N=d.div`
     width:100%;
     height:50px;
     background:${e=>e.darkMode?"hsl(235, 24%, 19%)":"hsl(0, 0%, 98%)"};
@@ -120,10 +120,10 @@ var e=Object.defineProperty,t=Object.defineProperties,o=Object.getOwnPropertyDes
     &:hover > .delete{
         opacity: 1;
     } 
-`,S=d.div`
+`,O=d.div`
     display:flex;
     align-items: center;
-`,O=({item:e,i:t,deleteItem:o,darkMode:r,checkItem:n})=>{const[a,i]=m.exports.useState(e.check);return s.createElement(N,{check:a,darkMode:r},s.createElement(S,null,s.createElement(v,{check:a,onClick:()=>{i(!a),n(!a,t,e)}},s.createElement(u,{size:"20px",className:"check"})),s.createElement("p",{title:e.value,className:"item-text"},e.value.length<40?e.value:`${e.value.slice(0,50)}...`)),s.createElement("div",{className:"delete",onClick:()=>o(t)},s.createElement("span",{className:"span one"}),s.createElement("span",{className:"span two"})))},$=e=>localStorage.setItem("todo",JSON.stringify(e)),C=({todo:e,setTodo:d,darkMode:l})=>{const c=t=>{const o=e.filter(((e,o)=>o!==t));d(o),$(o)},p=(d,l,s)=>{var c;e[l]=(c=((e,t)=>{for(var o in t||(t={}))n.call(t,o)&&i(e,o,t[o]);if(r)for(var o of r(t))a.call(t,o)&&i(e,o,t[o]);return e})({},e[l]),t(c,o({check:d}))),$(e)};return s.createElement("div",null,e.map(((t,o)=>s.createElement(O,{key:o,darkMode:l,item:t,i:o,deleteItem:c,checkItem:p,nextItem:e[o+1]||!1}))))},I=d.div`
+`,S=({item:e,i:t,deleteItem:o,darkMode:r,checkItem:a})=>c.createElement(N,{check:e.check,darkMode:r},c.createElement(O,null,c.createElement(v,{check:e.check,onClick:()=>a(!e.check,t)},c.createElement(u,{size:"20px",className:"check"})),c.createElement("p",{title:e.value,className:"item-text"},e.value.length<40?e.value:`${e.value.slice(0,50)}...`)),c.createElement("div",{className:"delete",onClick:()=>o(t)},c.createElement("span",{className:"span one"}),c.createElement("span",{className:"span two"}))),$=e=>localStorage.setItem("todo",JSON.stringify(e)),C=({todo:e,setTodo:d,darkMode:l})=>{const s=t=>{const o=e.filter(((e,o)=>o!==t));d([...o]),$(o)},p=(l,c)=>{var s;e[c]=(s=((e,t)=>{for(var o in t||(t={}))a.call(t,o)&&i(e,o,t[o]);if(r)for(var o of r(t))n.call(t,o)&&i(e,o,t[o]);return e})({},e[c]),t(s,o({check:l}))),d([...e]),$(e)};return c.createElement("div",null,e.map(((e,t)=>c.createElement(S,{key:t,darkMode:l,item:e,i:t,deleteItem:s,checkItem:p}))))},z=d.div`
     width:100%;
     height:50px;
     border-bottom-right-radius:5px;
@@ -134,7 +134,7 @@ var e=Object.defineProperty,t=Object.defineProperties,o=Object.getOwnPropertyDes
     align-items: center;
     justify-content:space-between;
     position:relative;
-`,z=d.p`
+`,I=d.p`
     color:hsl(234, 11%, 52%);
     padding:0 15px; 
 `,D=d.button`
@@ -174,4 +174,4 @@ var e=Object.defineProperty,t=Object.defineProperties,o=Object.getOwnPropertyDes
             margin:0;
         }
     }
-`,P=()=>JSON.parse(localStorage.getItem("todo")),J=({darkMode:e,todos:t,setTodo:o})=>{const r=e=>o(P().filter((t=>t.check===e)));return s.createElement(I,{darkMode:e},s.createElement(z,{darkMode:e},t.length," items left"),s.createElement(T,{darkMode:e},s.createElement("button",{className:"filter",onClick:()=>o(P())},"All"),s.createElement("button",{className:"filter",onClick:()=>r(!1)},"Activate"),s.createElement("button",{className:"filter",onClick:()=>r(!0)},"Completed")),s.createElement(D,{onClick:()=>{const e=P().filter((e=>!0!==e.check));o(t.filter((e=>!0!==e.check))),$(e)}},"Clear Completed"))};function G(){const[e,t]=m.exports.useState(!0),[o,r]=m.exports.useState(JSON.parse(window.localStorage.getItem("todo"))||[]),n=m.exports.useRef(null);return s.createElement(x,{darkMode:e},s.createElement(f,{darkMode:e}),s.createElement(h,null,s.createElement(E,{darkMode:e,setDarkMode:t}),s.createElement(j,{darkMode:e,reference:n,todo:o,setTodo:r}),s.createElement(b,null,s.createElement(C,{darkMode:e,todo:o,setTodo:r}),s.createElement(J,{darkMode:e,todos:o,setTodo:r}))))}g.render(s.createElement(s.StrictMode,null,s.createElement(G,null)),document.getElementById("root"));
+`,P=()=>JSON.parse(localStorage.getItem("todo")),J=({darkMode:e,todos:t,setTodo:o})=>{const r=e=>o(P().filter((t=>t.check===e)));return c.createElement(z,{darkMode:e},c.createElement(I,{darkMode:e},t.length," items left"),c.createElement(T,{darkMode:e},c.createElement("button",{className:"filter",onClick:()=>o(P())},"All"),c.createElement("button",{className:"filter",onClick:()=>r(!1)},"Activate"),c.createElement("button",{className:"filter",onClick:()=>r(!0)},"Completed")),c.createElement(D,{onClick:()=>{const e=P().filter((e=>!0!==e.check));o(t.filter((e=>!0!==e.check))),$(e)}},"Clear Completed"))};function G(){const[e,t]=m.exports.useState(!0),[o,r]=m.exports.useState(JSON.parse(window.localStorage.getItem("todo"))||[]),a=m.exports.useRef(null);return c.createElement(x,{darkMode:e},c.createElement(f,{darkMode:e}),c.createElement(h,null,c.createElement(E,{darkMode:e,setDarkMode:t}),c.createElement(j,{darkMode:e,reference:a,todo:o,setTodo:r}),c.createElement(b,null,c.createElement(C,{darkMode:e,todo:o,setTodo:r}),c.createElement(J,{darkMode:e,todos:o,setTodo:r}))))}g.render(c.createElement(c.StrictMode,null,c.createElement(G,null)),document.getElementById("root"));
