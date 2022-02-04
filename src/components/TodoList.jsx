@@ -4,7 +4,7 @@ import { saveLocalStorage } from '../functions/saveLocalStorage'
 const TodoList = ({ todo, setTodo, darkMode }) => {
   const deleteItem = item => {
     const newItem = todo.filter((it, i) => i !== item)
-    setTodo(newItem)
+    setTodo([...newItem])
     saveLocalStorage(newItem)
   }
   const checkItem = (check,i,itemT) => {
